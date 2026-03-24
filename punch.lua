@@ -63,7 +63,7 @@ end
 local QUICK_PUNCH_ID = 'rbxassetid://507770453' 
 local loadedAnim = nil
 local isPunching = false
-local PUNCH_COOLDOWN = 0.5
+local PUNCH_COOLDOWN = 0.1
 local isEquipped = false
 
 -- Function to build the tool
@@ -114,7 +114,7 @@ UserInputService.InputBegan:Connect(function(input, gameProcessed)
         local hrp = character and character:FindFirstChild("HumanoidRootPart")
         
         -- 1. Trigger the 1.5s fling physics window
-        flingEndTime = tick() + 1.5
+        flingEndTime = tick() + 1
 
         -- 2. Play the quick punch animation
         loadedAnim.Looped = false 
